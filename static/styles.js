@@ -52,6 +52,10 @@ while (computerScore < 5 && playerScore < 5) {
     console.log(`You have made ${round + 1} tries already`);
     console.log("The player score is " + playerScore);
     console.log("The computer score is " + computerScore);
+    getWinner(computerScore, playerScore);
     round++;
-    
+}
+
+function getWinner(computerScore, playerScore) {
+    (computerScore == 5) ? console.log("The computer wins") : console.log("The human player wins")
 }
