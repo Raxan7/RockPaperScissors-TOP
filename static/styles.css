@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(87, 14, 155);
+}
+div.buttons {
+    padding: 40px;
+    text-align: center;
+}
+.results {
+    display: flex;
+    background-color: rgb(89, 117, 240);
+    justify-content: space-evenly;
+}
+.results.label {
+    font-weight: bolder;
+    font-size: x-large;
+    color: cyan;
+}
+.score {
+    font-size: 100px;
+}
+.victorious {
+    font-size: 40px;
+    text-align: center;
+    padding: 55px;
+    border: double indianred 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: chartreuse;
+}
