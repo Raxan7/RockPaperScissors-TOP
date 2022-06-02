@@ -22,6 +22,9 @@ function gamePlay(playerSelection, computerSelection) {
     computerSelection == "PAPER" && computerSelection == "ROCK" ||
     computerSelection == "SCISSORS" && playerSelection == "PAPER") {
         alert(`You lose, ${computerSelection} beats ${playerSelection}`);
-    } 
+    } else if (playerSelection === computerSelection) {
+        alert(`The game was a tie, the computer's guess was ${computerSelection} amd your guess was 
+        ${playerSelection}. Go again!`)
+    }
 }
 gamePlay(playerSelection.toUpperCase(), computerSelection);
