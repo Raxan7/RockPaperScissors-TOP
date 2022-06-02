@@ -18,6 +18,10 @@ function gamePlay(playerSelection, computerSelection) {
     playerSelection == "PAPER" && computerSelection == "ROCK" ||
     playerSelection == "SCISSORS" && computerSelection == "PAPER") {
         alert(`You win, ${playerSelection} beats ${computerSelection}`);
+    } else if (computerSelection == "ROCK" && playerSelection == "SCISSORS" ||
+    computerSelection == "PAPER" && computerSelection == "ROCK" ||
+    computerSelection == "SCISSORS" && playerSelection == "PAPER") {
+        alert(`You lose, ${computerSelection} beats ${playerSelection}`);
     } 
 }
 gamePlay(playerSelection.toUpperCase(), computerSelection);
