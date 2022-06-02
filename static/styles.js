@@ -25,6 +25,8 @@ function gamePlay(playerSelection, computerSelection) {
     } else if (playerSelection === computerSelection) {
         alert(`The game was a tie, the computer's guess was ${computerSelection} amd your guess was 
         ${playerSelection}. Go again!`)
+    } else {
+        alert("I don't understand you! Please follow the rules of the game!")
     }
 }
 gamePlay(playerSelection.toUpperCase(), computerSelection);
