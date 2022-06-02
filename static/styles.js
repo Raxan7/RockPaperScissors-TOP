@@ -12,3 +12,12 @@ function computerPlay() {
 let computerSelection = computerPlay();
 let playerSelection = prompt("Make your choice: ");
 
+function gamePlay(playerSelection, computerSelection) {
+    // Conditions where the human player wins
+    if (playerSelection == "ROCK" && computerSelection == "SCISSORS" ||
+    playerSelection == "PAPER" && computerSelection == "ROCK" ||
+    playerSelection == "SCISSORS" && computerSelection == "PAPER") {
+        alert(`You win, ${playerSelection} beats ${computerSelection}`);
+    } 
+}
+gamePlay(playerSelection.toUpperCase(), computerSelection);
