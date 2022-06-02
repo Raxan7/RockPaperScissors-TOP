@@ -9,3 +9,6 @@ let dict = {1:"ROCK", 2:"PAPER", 3:"SCISSORS"};
 function computerPlay() {
     return dict[random(1,4)]
 }
+let computerSelection = computerPlay();
+let playerSelection = prompt("Make your choice: ");
+
