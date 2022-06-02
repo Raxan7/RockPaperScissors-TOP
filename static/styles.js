@@ -2,3 +2,6 @@
 let random = (min, max) => Math.floor(Math.random() * (max - min) + min);
 // console.log(random(1,4));
 
+// Then declare the dict that you'll call using keys
+let dict = {1:"ROCK", 2:"PAPER", 3:"SCISSORS"};
+
