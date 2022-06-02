@@ -12,21 +12,33 @@ function computerPlay() {
 let computerSelection = computerPlay();
 let playerSelection = prompt("Make your choice: ");
 
-function gamePlay(playerSelection, computerSelection) {
-    // Conditions where the human player wins
-    if (playerSelection == "ROCK" && computerSelection == "SCISSORS" ||
-    playerSelection == "PAPER" && computerSelection == "ROCK" ||
-    playerSelection == "SCISSORS" && computerSelection == "PAPER") {
-        alert(`You win, ${playerSelection} beats ${computerSelection}`);
-    } else if (computerSelection == "ROCK" && playerSelection == "SCISSORS" ||
-    computerSelection == "PAPER" && computerSelection == "ROCK" ||
-    computerSelection == "SCISSORS" && playerSelection == "PAPER") {
-        alert(`You lose, ${computerSelection} beats ${playerSelection}`);
-    } else if (playerSelection === computerSelection) {
-        alert(`The game was a tie, the computer's guess was ${computerSelection} amd your guess was 
-        ${playerSelection}. Go again!`)
-    } else {
-        alert("I don't understand you! Please follow the rules of the game!")
+function game() {
+    function gamePlay(playerSelection, computerSelection) {
+        // Conditions where the human player wins
+        if (playerSelection == "ROCK" && computerSelection == "SCISSORS" ||
+        playerSelection == "PAPER" && computerSelection == "ROCK" ||
+        playerSelection == "SCISSORS" && computerSelection == "PAPER") {
+            alert(`You win, ${playerSelection} beats ${computerSelection}`);
+        } else if (computerSelection == "ROCK" && playerSelection == "SCISSORS" ||
+        computerSelection == "PAPER" && computerSelection == "ROCK" ||
+        computerSelection == "SCISSORS" && playerSelection == "PAPER") {
+            alert(`You lose, ${computerSelection} beats ${playerSelection}`);
+        } else if (playerSelection === computerSelection) {
+            alert(`The game was a tie, the computer's guess was ${computerSelection} amd your guess was 
+            ${playerSelection}. Go again!`)
+        } else {
+            alert("I don't understand you! Please follow the rules of the game!")
+        }
     }
+    return gamePlay(playerSelection.toUpperCase(), computerSelection);
 }
-gamePlay(playerSelection.toUpperCase(), computerSelection);
+let i = 1;
+console.log(`You have made ${i} try already`);
+while (i < 5) {
+    game();
+    playerSelection = prompt("Second selection:");
+    computerSelection = computerPlay();
+    console.log(`You have made ${i + 1} tries already`);
+    i++;
+    
+}
