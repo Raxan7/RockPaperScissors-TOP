@@ -5,3 +5,7 @@ let random = (min, max) => Math.floor(Math.random() * (max - min) + min);
 // Then declare the dict that you'll call using keys
 let dict = {1:"ROCK", 2:"PAPER", 3:"SCISSORS"};
 
+// Create the function where the computer makes the quess
+function computerPlay() {
+    return dict[random(1,4)]
+}
